@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Freelancer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            width: 300px;
+            margin: auto;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            box-sizing: border-box;
+        }
+        label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Formulário de Freelancer</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
+
+        <label for="sobrenome">Sobrenome *</label>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Insira seu sobrenome" required>
+
+        <label for="telefone">Telefone *</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(99)99999-9999" required>
+
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
+
+        <label for="mensagem">Mensagem *</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Informe o que deseja." required></textarea>
+
+        <label for="lingua">Língua</label>
+        <select id="lingua" name="lingua">
+            <option value="pt-br">Português (pt-br)</option>
+            <option value="en">Inglês</option>
+            <!-- Adicione mais opções se necessário -->
+        </select>
+
+        <label for="prototipo">Protótipo (Requisitos)</label>
+        <input type="file" id="prototipo" name="prototipo">
+
+        <label for="linguagens">As linguagens que você prefere?</label>
+        <select id="linguagens" name="linguagens[]" multiple>
+            <option value="java">Java</option>
+            <option value="c">C</option>
+            <option value="cpp">C++</option>
+            <option value="php">PHP</option>
+            <!-- Adicione mais opções se necessário -->
+        </select>
+
+        <label>Banco de Dados</label><br>
+        <input type="radio" id="mysql" name="banco_dados" value="mysql">
+        <label for="mysql">MySQL</label>
+        <input type="radio" id="postgresql" name="banco_dados" value="postgresql">
+        <label for="postgresql">Postgresql</label>
+        <input type="radio" id="mongodb" name="banco_dados" value="mongodb">
+        <label for="mongodb">MongoDB</label>
+        <input type="radio" id="na" name="banco_dados" value="na">
+        <label for="na">N/A</label>
+        <input type="radio" id="outra" name="banco_dados" value="outra">
+        <label for="outra">Outra</label><br><br>
+
+        <label for="turno">Turno para Reuniões *</label><br>
+        <input type="checkbox" id="manha" name="turno" value="manha">
+        <label for="manha">Manhã</label>
+        <input type="checkbox" id="tarde" name="turno" value="tarde">
+        <label for="tarde">Tarde</label>
+        <input type="checkbox" id="noite" name="turno" value="noite">
+        <label for="noite">Noite</label><br><br>
+
+        <label for="horario">Horário Sugerido</label>
+        <input type="time" id="horario" name="horario">
+
+        <label for="data">Data Prevista de Entrega *</label>
+        <input type="date" id="data" name="data" required>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+</div>
+
+</body>
+</html>
